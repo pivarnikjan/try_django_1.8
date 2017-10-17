@@ -6,7 +6,7 @@ from .forms import ContactForm, SignUpForm
 
 
 def home(request):
-    title = "Welcome"
+    title = "Welcome on register page"
     form = SignUpForm(request.POST or None)
 
     context = {
@@ -31,8 +31,6 @@ def home(request):
 def contact(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
-        # for key, value in form.cleaned_data.items():
-        #     print(key, value)
         form_full_name = form.cleaned_data.get("full_name")
         form_message = form.cleaned_data.get("message")
         form_email = form.cleaned_data.get("mail")
