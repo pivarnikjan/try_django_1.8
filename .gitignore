@@ -141,3 +141,5 @@ fabric.properties
 
 /trydjango18/db.sqlite3
 /.idea
+/static_root/
+/media_root/
