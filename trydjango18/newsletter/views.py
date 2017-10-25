@@ -19,13 +19,12 @@ def home(request):
         full_name = form.cleaned_data.get('full_name')
 
         if not full_name:
-            instance.full_name = "Justin Bieber"
+            instance.full_name = "Anonymous"
         instance.save()
         context = {
             "title": "Thank you"
         }
-
-    return render(request, "base.html", context)
+    return render(request, "home.html", context)
 
 
 def contact(request):
